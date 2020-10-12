@@ -8,13 +8,15 @@ export default function ReviewDetails({ route, navigation }) {
     return(
         <View style={globalStyles.container}>
             <Text>
-            Title: {JSON.stringify(title)}
+            {title}
             </Text>
+
             <Text>
-            Rating: {JSON.stringify(rating)}
+            {rating}
             </Text>
+
             <Text>
-            Sumary: {JSON.stringify(body)}
+            {body}
             </Text>
         </View>
     )

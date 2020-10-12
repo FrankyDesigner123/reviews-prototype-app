@@ -1,21 +1,15 @@
 import * as React from 'react';
-import { View, Text } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Home from '../screens/home';
 import ReviewDetails from '../screens/reviewDetails';
 
-const { Navigator, Screen } = createStackNavigator();
+const Stack = createStackNavigator();
 
-const HomeNavigator = () => (
-    <Navigator>
-        <Screen name="Home" component={Home}/>
-        <Screen name="Details" component={ReviewDetails}/>
-    </Navigator>
-);
-
-export const AppNavigator = () => (
-    <NavigationContainer>
-        <HomeNavigator/>
-    </NavigationContainer>
-)
+export default homeStack = () => {
+    return (
+        <Stack.Navigator screenOptions={{headerStyle:{backgroundColor: '#ffe343'}}}>
+            <Stack.Screen name="Home" component={Home} options={{title: 'PopcornTime'}}/>
+            <Stack.Screen name="Details" component={ReviewDetails} options={{title: 'Review Details'}}/>
+        </Stack.Navigator> 
+    );
+};

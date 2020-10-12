@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import * as Font from 'expo-font';
-import Home from './screens/home';
 import { AppLoading } from 'expo';
-import { AppNavigator } from './routes/homeStack';
+import Navigator from './routes/drawer';
+import Home from './screens/home';
 
 const getFonts = () =>  Font.loadAsync({
     'poppins-light': require('./assets/fonts/Poppins-Light.ttf'),
@@ -16,7 +16,7 @@ export default function App() {
 
   if(fontsLoaded){
     return(
-      <AppNavigator />
+      <Navigator />
     );
   } else {
     return (
