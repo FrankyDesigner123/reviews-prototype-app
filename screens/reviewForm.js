@@ -33,6 +33,7 @@
                  {(props) => (
                      <View>
                          <TextInput 
+                            minHeight={60}
                             style={globalStyles.input}
                             placeholder='Review title'
                             onChangeText={props.handleChange('title')}
@@ -41,7 +42,7 @@
                          />
                          <Text style={globalStyles.errorText}>{ props.touched.title && props.errors.title }</Text>
                          <TextInput 
-                            multiline
+                            multiline minHeight={60}
                             style={globalStyles.input}
                             placeholder='Review body'
                             onChangeText={props.handleChange('body')}
@@ -50,6 +51,7 @@
                          />
                          <Text style={globalStyles.errorText}>{ props.touched.body && props.errors.body }</Text>
                          <TextInput 
+                            minHeight={60}
                             style={globalStyles.input}
                             placeholder='Review rating (1-5)'
                             onChangeText={props.handleChange('rating')}
